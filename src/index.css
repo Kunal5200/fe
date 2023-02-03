@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+::-webkit-scrollbar {
+  width: 0px;
+}
+
+@layer components {
+  .nav_link::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #108896;
+    transform-origin: bottom left;
+    transition: transform 0.5s ease-out;
+  }
+
+  .nav_link:hover::after {
+    transform: scaleX(1);
+    /* color: #dc33a9; */
+    height: 2px;
+  }
+}
